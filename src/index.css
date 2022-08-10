@@ -1,0 +1,113 @@
+/* google fonts */
+
+@import url("https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Istok+Web&display=swap");
+
+/* reset default style */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* base style */
+
+body {
+  background: #fcfcfc;
+  font-family: "Istok Web", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "RocknRoll One", sans-serif !important;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+h1,
+h2 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #212245;
+}
+
+.container {
+  display: flex;
+}
+
+main {
+  width: 100%;
+  padding: 20px;
+}
+
+.sidebar {
+  background: #000;
+  color: #fff;
+  height: 100vh;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+.top-section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.logo {
+  font-size: 30px;
+  color: #fff;
+}
+.bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.link {
+  display: flex;
+  color: #fff;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.link:hover {
+  background: lightskyblue;
+  color: #000;
+  transition: all 0.2s;
+}
+
+.active {
+  background-color: lightskyblue;
+  color: #000;
+}
+
+.icon,
+.link-text {
+  font-size: 25px;
+}
+
+.dropdown {
+  padding: 20px;
+  background-color: #212245;
+  display: none;
+}
+
+.dropdown .dropdown-items {
+  margin: 20px;
+}
+
+.dropdown .dropdown-items ul li {
+  margin: 20px 0;
+}
