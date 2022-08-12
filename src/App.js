@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
-import Dashboard from "./pages/Dashboard";
-import Order from "./pages/Order";
-import Comment from "./pages/Comment";
-import Analytics from "./pages/Analytics";
-import Product from "./pages/Product";
-import ProductList from "./pages/ProductList";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Order from "./pages/dashboard/Order";
+import Comment from "./pages/dashboard/Comment";
+import Analytics from "./pages/dashboard/Analytics";
+import Product from "./pages/dashboard/Product";
+import ProductList from "./pages/dashboard/ProductList";
 import Sidebar from "./components/sidebar/Sidebar";
 
 function App() {

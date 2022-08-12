@@ -17,7 +17,10 @@ import { NavLink } from "react-router-dom";
 
 export default function Sidebar({ children }) {
   const [isOpen, setIsOpen] = useState(true);
+  const [isDropdown, setIsDropdown] = useState(false);
+
   const toggle = () => setIsOpen(!isOpen);
+  const dropdown = () => setIsDropdown(!isDropdown);
 
   const menuItem = [
     {
@@ -53,6 +56,7 @@ export default function Sidebar({ children }) {
       icon: <AiFillSetting />,
     },
   ];
+
   return (
     <>
       <div className='container'>
@@ -79,13 +83,14 @@ export default function Sidebar({ children }) {
                   <div
                     className='link-text'
                     style={{ display: isOpen ? "block" : "none" }}
+                    title='Dashboard'
                   >
                     Dashboard
                   </div>
                 </NavLink>
               </li>
               <li>
-                <div className='link'>
+                <div className='link' onClick={dropdown}>
                   <div className='icon'>
                     <FaShoppingBag />
                   </div>
@@ -107,16 +112,25 @@ export default function Sidebar({ children }) {
 
                 <div
                   className='dropdown'
-                  //   style={{ display: isOpen ? "block" : "none" }}
+                  style={{ display: isDropdown ? "block" : "none" }}
                 >
                   <div className='dropdown-links'>
                     <div className='dropdown-items'>
                       <ul>
                         <li>
-                          <NavLink to='/addproduct'>Add</NavLink>
+                          <NavLink to='/addproduct'>
+                            <div className='dropdorn-link-text'>
+                              {" "}
+                              Add Product
+                            </div>
+                          </NavLink>
                         </li>
                         <li>
-                          <NavLink to='/allproduct'>All Products</NavLink>
+                          <NavLink to='/allproduct'>
+                            <div className='dropdorn-link-text'>
+                              All Products
+                            </div>
+                          </NavLink>
                         </li>
                       </ul>
                     </div>
@@ -167,7 +181,10 @@ export default function Sidebar({ children }) {
                   <div className='icon'>
                     <AiFillSetting />
                   </div>
-                  <div className='link-text style={{ display: isOpen ? "block" : "none" }}'>
+                  <div
+                    className='link-text'
+                    style={{ display: isOpen ? "block" : "none" }}
+                  >
                     Setting
                   </div>
                 </NavLink>
